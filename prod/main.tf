@@ -4,5 +4,5 @@ module "prod" {
   instance_name = "PROD-instance"
   machine_type  = "e2-micro"
   image         = "debian-cloud/debian-11"
-  network_name  = "PROD terraform-network"
+  network_name  = "PROD-terraform-network"
 }
