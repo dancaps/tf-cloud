@@ -1,10 +1,10 @@
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance"
-  machine_type = "e2-micro"
+  name         = var.instance_name
+  machine_type = var.machine_type
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = var.image
     }
   }
 
@@ -16,6 +16,6 @@ resource "google_compute_instance" "vm_instance" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  name                    = "terraform-network"
+  name                    = var.network_name
   auto_create_subnetworks = "true"
 }
