@@ -15,5 +15,5 @@ output "network_name" {
 
 output "network_id" {
   description = "The id of the network"
-  value = google_compute_network.vpc_network.id
+  value       = google_compute_network.vpc_network.id
 }
